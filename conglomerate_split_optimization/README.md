@@ -22,7 +22,7 @@ We define $Opt(i,j)$ as a boolean value:
 
 $$
 Opt(i,j) = \begin{cases}
-T, & \text{if } \exists A \subseteq \{1,2,\ldots,i\}: \sum_{a \in A} w_a = j \\
+T, & \text{if } \exists_{A \subseteq {\\\{1,2,\ldots,i\\\}}}: \sum_{a \in A} w_a = j \\
 F, & \text{otherwise}
 \end{cases}
 $$
