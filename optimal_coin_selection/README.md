@@ -24,8 +24,8 @@ The formula in mathematical notation is represented as:
 $$
 Opt(i,j) = \max\{
 \begin{cases}
-v_i + \min(Opt(i+2,j), Opt(i+1,j-1)), \\
-v_{i+1} + \min(Opt(i,j-1), Opt(i+2,j-1))
+v_i + \min(Opt(i+2,j),  Opt(i+1,j-1)), \\
+v_{i+1} + \min(Opt(i,j-2),  Opt(i+1,j-1))
 \end{cases}}
 $$
 
