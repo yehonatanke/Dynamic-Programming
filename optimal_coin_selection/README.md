@@ -43,6 +43,19 @@ We fill the array iteratively, using the recurrence formula. For each cell $Opt(
 ### Location of the Solution
 The final solution is found in $Opt(1,S)$, where $S$ is the target sum.
 
+### Correctness
+For each turn, given a subarray of coins $(v_i,...,v_j)$ where $1 \leq i < j \leq n$, we need to choose the step that ensures maximum profit among the two possible steps: choosing $v_i$ or choosing $v_j$. We assume the opponent will make the optimal move for themselves.
+
+If we choose $v_i$, the opponent's optimal move will be the maximum between taking $v_{i+1}$ or $v_j$, leaving the first player with either subarray $(v_{i+2},...,v_j)$ or subarray $(v_{i+1},v_{j-1})$. Thus, the maximum profit is $v_i + \min(Opt(i+2,j), Opt(i+1,j-1))$.
+
+Similarly, if we choose $v_j$, the maximum profit is $v_j + \min(Opt(i,j-2), Opt(i+1,j-1))$. We choose the maximum of these two steps, thus proving the correctness of the recurrence formula.
+
+For initialization, we perform this for all pairs $(v_i, v_{i+1})$ as we need to choose the maximum among them to win. 
+
+In other words, initialization is done for the diagonal below the main diagonal in the $Opt$ matrix of size $n \times n$. If $n$ can be odd, we initialize the main diagonal $Opt(i,i)=v_i$ (single coin in the sequence). The matrix is filled for all diagonals below the main diagonal, calculating the maximum profit for all subarrays of length 2, then length 3, and so on until we reach $Opt(1,n)$, which is the profit of the original sequence of length $n$ that we are looking for.
+
+
+
 ### Efficiency
 - Time complexity: $O(n^2S)$, where $n$ is the number of coin denominations and $S$ is the target sum.
 - Space complexity: $O(nS)$ for storing the dynamic programming array.
