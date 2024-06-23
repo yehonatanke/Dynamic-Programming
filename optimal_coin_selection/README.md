@@ -1,6 +1,6 @@
 <h1 align="center">Optimal Coin Selection</h1>
 
-## Table of Contents
+### Table of Contents
 - [Problem](#problem)
 - [Solution](#solution)
 
