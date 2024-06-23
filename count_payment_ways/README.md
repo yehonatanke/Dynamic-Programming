@@ -1,6 +1,6 @@
 <h1 align="center">Efficiently Counting Payment Options <br> Using 1, 3, and 5-Value Coins</h1>
 
-## Table of Contents
+### Table of Contents
 - [Problem](#problem)
 - [Solution](#solution)
 
