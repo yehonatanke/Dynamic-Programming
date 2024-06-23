@@ -1,6 +1,6 @@
 <h1 align="center">Maximum Independent Set in Graphs</h1>
 
-## Table of Contents
+### Table of Contents
 - [Problem](#problem)
 - [Solution](#solution)
 
