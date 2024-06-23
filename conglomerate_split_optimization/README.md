@@ -34,11 +34,12 @@ We initialize the first row of the array as follows:
 
 $Opt(1,j) = (w_1 == j)$ for all $1 \leq j \leq \frac{w}{2}$
 
-### Updating the Array According to the Withdrawal Formula
+### Updating the Array According to the Regression Formula
 For each cell in the array, we use the following formula:
 $Opt(i,j) = Opt(i-1,j) \text{ OR } Opt(i-1,j-w_i)$
 
-Note: If $j - w_i < 1$, we only use $Opt(i-1,j)$.
+#### Note
+If $j - w_i < 1$, we only use $Opt(i-1,j)$.
 
 ### Where is the Final Result Saved
 The final result is found in $Opt(n,\frac{w}{2})$, 
