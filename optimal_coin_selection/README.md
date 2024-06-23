@@ -18,10 +18,21 @@ We use dynamic programming to solve this problem efficiently. We create a 2D arr
 ### The Recurrence Formula
 The core of the solution is based on the following recurrence relation:
 
-$Opt(i,j) = \max\begin{cases}
-v_i + \min(Opt(i+2,j), Opt(i+1,j-1)) \\
+
+The formula in mathematical notation is represented as:
+
+$$
+Opt(i,j) = \max\{
+\begin{cases}
+v_i + \min(Opt(i+2,j), Opt(i+1,j-1)), \\
 v_{i+1} + \min(Opt(i,j-1), Opt(i+2,j-1))
-\end{cases}$
+\end{cases}}
+$$
+
+where:
+- $Opt(i,j)$ denotes the maximum score achievable starting from position $i$ to $j$.
+- $v_i$ and $v_{i+1}$ represent values associated with positions $i$ and $i+1$ respectively.
+
 
 ### Initialization of the Array
 We initialize the array with base cases for $i \leq n$ and $j = 1$.
