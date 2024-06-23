@@ -1,6 +1,6 @@
 <h1 align="center">Maximum Palindrome</h1>
 
-## Table of Contents
+### Table of Contents
 - [Problem](#problem)
 - [Solution](#solution)
 
