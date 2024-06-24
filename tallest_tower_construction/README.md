@@ -23,7 +23,8 @@ All lengths are different, all widths are different, and all heights are differe
 We use a dynamic programming approach to solve this problem. We sort the boxes by a dimension (e.g., length) and then use a recursive formula to find the tallest tower that can be built ending with each box.
 
 ### The Regression Formula
-$Opt(i) = h(i) + \max_{k<i \text{ such that } w(k)>w(i)} \{Opt(k)\} \cup \{0\}$
+
+$$Opt(i) = h(i) + \max_{k &lt i \text{ such that } w(k)>w(i)} \\\{ Opt(k) \cup \{0\}\\\}$$
 
 Where $Opt(i)$ is the height of the tallest tower that can be built ending with box $i$.
 
